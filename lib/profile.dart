@@ -124,7 +124,7 @@ class QuizCard extends StatelessWidget {
                 if (isSports) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const QuizPage()),
+                    MaterialPageRoute(builder: (context) =>  QuizPage()),
                   );
                 }
               },

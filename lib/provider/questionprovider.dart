@@ -1,34 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:mindo/model/question_model.dart';
-// import 'package:mindo/model/questionmodel.dart';
-// import 'package:mindo/service/questionservice.dart';
-
-// class QuestionProvider extends ChangeNotifier{
-
-//   List<Questionmodel> _questions = [];
-//   bool _isLoading = false;
-//   String _errorMessage = '';
-//   List<Questionmodel> get questions=>_questions;
-//   bool get isLoading => _isLoading;
-//   String get errorMessage => _errorMessage;
-//    Future<void> loadQuestions(String category, int amount) async{
-//     _isLoading = true;
-//     _errorMessage = '';
-//     notifyListeners();
-//     final result = await Questionservice.getQuestion(category, amount);
-
-//     if (result.isSuccess) {
-//       _questions = result.data!;
-//       _errorMessage = '';
-//     } else {
-//       _questions = [];
-//       _errorMessage = result.error!;
-//     }
-//     _isLoading = false;
-//     notifyListeners();
-//    }
-
-// }
 
 import 'package:flutter/material.dart';
 //import 'package:mindo/model/question_model.dart';

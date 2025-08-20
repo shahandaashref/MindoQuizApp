@@ -87,18 +87,18 @@ class HomeScreen extends StatelessWidget {
                 runSpacing: 16,
                 children: [
                   _buildCategoryCard('Sports', 'assets/images/light/basket.png', '50 questions', cardColor, isDark, (){
-          Navigator.pushNamed(context,'/quizPage',arguments: categoryId[0]='21');
-        },'21'),
+          Navigator.pushNamed(context,'/quizPage',arguments: '21');
+        },),
                   _buildCategoryCard('Chemistry', 'assets/images/light/test_tube.png', '30 questions', cardColor, isDark,(){
-          Navigator.pushNamed(context,'/quizPage',arguments: categoryId[1]='17' );},'17'),
+          Navigator.pushNamed(context,'/quizPage',arguments: '17' );},),
                   _buildCategoryCard('Math', 'assets/images/light/content.png', '95 questions', cardColor, isDark,(){
-          Navigator.pushNamed(context,'/quizPage',arguments: categoryId[2]='19' );},'19'),
+          Navigator.pushNamed(context,'/quizPage',arguments: '19' );},),
                   _buildCategoryCard('History', 'assets/images/light/calender.png', '128 questions', cardColor, isDark,(){
-          Navigator.pushNamed(context,'/quizPage' ,arguments: categoryId[3]='23');},'23'),
+          Navigator.pushNamed(context,'/quizPage' ,arguments: '23');},),
                   _buildCategoryCard('Biological', 'assets/images/light/dna.png', '30 questions', cardColor, isDark,(){
-          Navigator.pushNamed(context,'/quizPage',arguments: categoryId[4]='17' );},'17'),
+          Navigator.pushNamed(context,'/quizPage',arguments: '17' );},),
                   _buildCategoryCard('Geography', 'assets/images/light/map.png', '24 questions', cardColor, isDark,(){
-          Navigator.pushNamed(context,'/quizPage',arguments: categoryId[5]='22' );},'22'),
+          Navigator.pushNamed(context,'/quizPage',arguments: '22' );},),
                 ],
               ),
             ],
@@ -126,7 +126,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildCategoryCard(String title, String imagePath, String questions, Color bg, bool isDark,dynamic onTap,String category) {
+  Widget _buildCategoryCard(String title, String imagePath, String questions, Color bg, bool isDark,dynamic onTap) {
     
     return Container(
       width: 120,
