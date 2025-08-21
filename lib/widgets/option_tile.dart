@@ -37,7 +37,7 @@ class OptionTile extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          color: getColor().withOpacity(0.2),
+          color: getColor().withValues(alpha:  0.2),
           border: Border.all(color: getColor(), width: 2),
         ),
         child: Row(

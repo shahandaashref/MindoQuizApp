@@ -1,0 +1,103 @@
+{
+  "@@locale": "en",
+  
+  "appTitle": "Mindo Quizzes",
+  "appTagline": "Test your self with Mindo quizzes",
+  
+  "hiImMindo": "Hi, I'm Mindo! Choose from various categories and challenge yourself with multiple quizzes. Let's show the world your genius!",
+  
+  "beTheTop": "Be the top with Mindo",
+  "earnPointsDescription": "Earn points for each quiz you complete and climb the leaderboard. Ready to become a Quizmaster champion?",
+  "tapStartToBegin": "Tap \"Start\" to begin!",
+  
+  "welcome": "Welcome!",
+  "hello": "Hello!",
+  "hi": "Hi,",
+  
+  "signInToContinue": "Sign in to continue",
+  "forgotPassword": "Forgot password?",
+  "signIn": "Sign in",
+  "createAnAccount": "Create an account",
+  "signUp": "Sign up",
+  "createPassword":"Create password",
+  "Repeat": "Repeat your password",
+  
+  "toStartWorking": "To start working",
+  "next": "Next",
+  
+  "serhiiIvanov": "Serhii Ivanov",
+  "letsMakeThisDayProductive": "Let's make this day productive",
+  
+  "ranking": "Ranking",
+  "points": "Points",
+  "letsPlay": "Let's play",
+  
+  "sports": "Sports",
+  "chemistry": "Chemistry",
+  "math": "Math",
+  "history": "History",
+  
+  "profile": "Profile",
+  "logOut": "Log out",
+  "quizzesGrades": "quizzes grades",
+  
+  "oops": "Oops",
+  "failureMessage": "You did not achieve the passing score required, earning 30 points on this test, which brings your current score to 200 points. You can review your answers and try again, or return to the home page to attempt another test and improve your score",
+  "home": "Home",
+  "retry": "Retry",
+  
+  "congratulations": "congratulations!",
+  "successMessage": "You have achieved the passing score required, earning 60 points on this test and bringing your current score to 300 points. You can now proceed to the Leaderboard, or return to the home page to attempt another test and earn more points.",
+  
+  "leaderboard": "Leaderboard",
+  "allTime": "All time",
+  "thisWeek": "This week",
+  "month": "Month",
+  
+  "start": "Start",
+  "continue": "Continue",
+  "back": "Back",
+  "cancel": "Cancel",
+  "ok": "OK",
+  "close": "Close",
+  "save": "Save",
+  "delete": "Delete",
+  "edit": "Edit",
+  "submit": "Submit",
+  "finish": "Finish",
+  "done": "Done",
+  
+  "quiz": "Quiz",
+  "quizzes": "Quizzes",
+  "question": "Question",
+  "questions": "Questions",
+  "answer": "Answer",
+  "answers": "Answers",
+  "score": "Score",
+  "totalScore": "Total Score",
+  "currentScore": "Current Score",
+  
+  "categories": "Categories",
+  "category": "Category",
+  "selectCategory": "Select Category",
+  
+  "difficulty": "Difficulty",
+  "easy": "Easy",
+  "medium": "Medium",
+  "hard": "Hard",
+  
+  "settings": "Settings",
+  "language": "Language",
+  "theme": "Theme",
+  "darkMode": "Dark Mode",
+  "lightMode": "Light Mode",
+  "sound": "Sound",
+  "notifications": "Notifications",
+  
+  "loading": "Loading",
+  "pleaseWait": "Please wait",
+  "error": "Error",
+  "tryAgain": "Try again",
+  "networkError": "Network Error",
+  "checkConnection": "Check your internet connection"
+}

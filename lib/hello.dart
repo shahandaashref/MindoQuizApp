@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:mindo/generated/l10n.dart';
 import 'HomeScreen.dart';
 
 class HelloPage extends StatelessWidget {
@@ -40,15 +41,15 @@ class HelloPage extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Hello!", style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: textColor)),
+                  Text('', style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: textColor)),
                   SizedBox(height: 4),
                   Text("Serhii Ivanov", style: TextStyle(fontSize: 16, color: subTextColor)),
                 ],
               ),
               SizedBox(height: 24),
-              buildPassField(passController, "Create password", fieldBg, textColor),
+              buildPassField(passController, S.of(context).createPassword, fieldBg, textColor),
               SizedBox(height: 12),
-              buildPassField(repeatPassController, "Repeat your password", fieldBg, textColor),
+              buildPassField(repeatPassController,S.of(context).Repeat, fieldBg, textColor),
               SizedBox(height: 24),
               Row(
                 children: [
@@ -81,7 +82,7 @@ class HelloPage extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("Next", style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
+                          Text(S.of(context).next, style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600)),
                           SizedBox(width: 8),
                           Icon(Icons.arrow_forward, color: Colors.white),
                         ],

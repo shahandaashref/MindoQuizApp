@@ -1,6 +1,8 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:mindo/generated/l10n.dart';
+import 'package:mindo/widgets/langbuttom.dart';
 import 'package:provider/provider.dart';
 import 'package:mindo/provider/questionprovider.dart';
 import '../model/question_model.dart';
@@ -136,7 +138,10 @@ class _QuizPageState extends State<QuizPage> {
     widget.category= categoryId;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Quiz'),
+        title: Text(S.of(context).quiz,),
+        // actions: [
+        //   SimpleLanguageToggle(),
+        // ],
         backgroundColor: const Color.fromARGB(255, 100, 63, 163),
         foregroundColor: Colors.white,
       ),
@@ -182,7 +187,7 @@ class _QuizPageState extends State<QuizPage> {
                             widget.numberOfQuestions
                           );
                         },
-                        child: const Text('Retry'),
+                        child:  Text(S.of(context).retry),
                       ),
                     ],
                   ),
@@ -263,13 +268,18 @@ class _QuizPageState extends State<QuizPage> {
                     onPressed: () {
                       if (provider.currentQuestionIndex == 
                         provider.questions.length - 1) {
-                       // Navigator.pushNamed(context, routeName)
+                          if (provider.score>=5) {
+                            Navigator.pushNamed(context, '/congrats');
+                          }else{
+                            Navigator.pushNamed(context, '/oops');
+                          }
                       }
-                      if (provider.currentQuestionIndex == 
-                          provider.questions.length - 1) {
-                        timer?.cancel();
-                        _showResultDialog(provider);
-                      } else {
+                      // if (provider.currentQuestionIndex == 
+                      //     provider.questions.length - 1) {
+                      //   timer?.cancel();
+                      //   _showResultDialog(provider);
+                      // } 
+                      else {
                         goToNextQuestion();
                       }
 

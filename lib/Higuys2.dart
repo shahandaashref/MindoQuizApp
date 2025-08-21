@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mindo/generated/l10n.dart';
+import 'package:mindo/widgets/langbuttom.dart';
 import 'wellcome.dart';
 
 class Higuys2 extends StatefulWidget {
@@ -20,6 +22,9 @@ class _Higuys2State extends State<Higuys2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   leading: SimpleLanguageToggle(),
+      // ),
       body: Stack(
         children: [
           Positioned.fill(
@@ -37,7 +42,7 @@ class _Higuys2State extends State<Higuys2> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Be the top with Mindo',
+                  S.of(context).beTheTop,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 24,
@@ -46,7 +51,7 @@ class _Higuys2State extends State<Higuys2> {
                 ),
                 const SizedBox(height: 15),
                 Text(
-                  'Earn points for each quiz you complete and climb the leaderboard. Ready to become a Quizmaster champion? \n Tap "Start" to begin!',
+                  S.of(context).earnPointsDescription,
                   style: TextStyle(
                     color: isDark ? Colors.white70 : Colors.black87,
                     fontSize: 16,
@@ -91,7 +96,7 @@ class _Higuys2State extends State<Higuys2> {
                 elevation: 0,
               ),
               child: Text(
-                'Start',
+                S.of(context).start,
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
@@ -104,12 +109,20 @@ class _Higuys2State extends State<Higuys2> {
           Positioned(
             top: 40,
             right: 20,
-            child: IconButton(
-              icon: Icon(
-                isDark ? Icons.dark_mode : Icons.light_mode,
-                color: isDark ? Colors.white : Colors.black,
-              ),
-              onPressed: toggleTheme,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              
+              children: [
+                SimpleLanguageToggle(),
+                
+                IconButton(
+                  icon: Icon(
+                    isDark ? Icons.dark_mode : Icons.light_mode,
+                    color: isDark ? Colors.white : Colors.black,
+                  ),
+                  onPressed: toggleTheme,
+                ),
+              ],
             ),
           ),
         ],

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:mindo/generated/l10n.dart';
 import 'SignUp.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -71,7 +72,7 @@ class WelcomePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage(isDark: isDark, toggleTheme: toggleTheme)));
                     },
-                    child: Text("Sign in", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
+                    child: Text(S.of(context).quiz, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
                   ),
                 ),
                 SizedBox(height: 32),

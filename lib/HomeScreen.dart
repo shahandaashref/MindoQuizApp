@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:mindo/generated/l10n.dart';
 import 'Profile.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -25,9 +26,9 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Hi, malak', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 25, color: textColor)),
+              Text(S.of(context).hi, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 25, color: textColor)),
               SizedBox(height: 8),
-              Text('Let’s make this day productive', style: TextStyle(fontWeight: FontWeight.w400, fontSize: 11, color: subTextColor)),
+              Text(S.of(context).letsPlay, style: TextStyle(fontWeight: FontWeight.w400, fontSize: 11, color: subTextColor)),
               SizedBox(height: 16),
 
               Container(
@@ -37,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(16),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
+                      color: Colors.black.withValues(alpha:  0.05),
                       offset: Offset(4, 4),
                       blurRadius: 12,
                     ),
@@ -53,7 +54,7 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Icon(Icons.star, size: 20, color: Color(0xFF4555A4)),
                             SizedBox(width: 4),
-                            Text('Ranking', style: TextStyle(fontWeight: FontWeight.w400, fontSize: 10, color: textColor)),
+                            Text(S.of(context).ranking, style: TextStyle(fontWeight: FontWeight.w400, fontSize: 10, color: textColor)),
                           ],
                         ),
                         Text('348', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15, color: Color(0xFF4555A4))),
@@ -67,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                           children: [
                             Image.asset('assets/images/light/coin.png', width: 20, height: 20),
                             SizedBox(width: 4),
-                            Text('Points', style: TextStyle(fontWeight: FontWeight.w400, fontSize: 10, color: textColor)),
+                            Text(S.of(context).points, style: TextStyle(fontWeight: FontWeight.w400, fontSize: 10, color: textColor)),
                           ],
                         ),
                         Text('1209', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 15, color: Color(0xFF4555A4))),
@@ -78,7 +79,7 @@ class HomeScreen extends StatelessWidget {
               ),
               SizedBox(height: 24),
 
-              Text('Let\'s play', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 17, color: textColor)),
+              Text(S.of(context).letsPlay, style: TextStyle(fontWeight: FontWeight.w700, fontSize: 17, color: textColor)),
               SizedBox(height: 16),
 
               
@@ -86,14 +87,14 @@ class HomeScreen extends StatelessWidget {
                 spacing: 16,
                 runSpacing: 16,
                 children: [
-                  _buildCategoryCard('Sports', 'assets/images/light/basket.png', '50 questions', cardColor, isDark, (){
+                  _buildCategoryCard(S.of(context).sports, 'assets/images/light/basket.png', '50 questions', cardColor, isDark, (){
           Navigator.pushNamed(context,'/quizPage',arguments: '21');
         },),
-                  _buildCategoryCard('Chemistry', 'assets/images/light/test_tube.png', '30 questions', cardColor, isDark,(){
+                  _buildCategoryCard(S.of(context).chemistry, 'assets/images/light/test_tube.png', '30 questions', cardColor, isDark,(){
           Navigator.pushNamed(context,'/quizPage',arguments: '17' );},),
-                  _buildCategoryCard('Math', 'assets/images/light/content.png', '95 questions', cardColor, isDark,(){
+                  _buildCategoryCard(S.of(context).math, 'assets/images/light/content.png', '95 questions', cardColor, isDark,(){
           Navigator.pushNamed(context,'/quizPage',arguments: '19' );},),
-                  _buildCategoryCard('History', 'assets/images/light/calender.png', '128 questions', cardColor, isDark,(){
+                  _buildCategoryCard(S.of(context).history, 'assets/images/light/calender.png', '128 questions', cardColor, isDark,(){
           Navigator.pushNamed(context,'/quizPage' ,arguments: '23');},),
                   _buildCategoryCard('Biological', 'assets/images/light/dna.png', '30 questions', cardColor, isDark,(){
           Navigator.pushNamed(context,'/quizPage',arguments: '17' );},),

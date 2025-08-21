@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mindo/generated/l10n.dart';
 
 class NextButton extends StatelessWidget {
   final bool isLast;
@@ -18,7 +19,7 @@ class NextButton extends StatelessWidget {
         ),
       ),
       child: Text(
-        isLast ? "Finish" : "Next",
+        isLast ? S.of(context).finish : S.of(context).next,
         style: const TextStyle(fontSize: 18, color: Colors.white) , 
       ),
     );

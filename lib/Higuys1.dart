@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mindo/generated/l10n.dart';
 import 'package:provider/provider.dart';
 // import 'package:test/Higuys2.dart';
 import 'Higuys2.dart';
@@ -57,8 +58,6 @@ class _QuizScreenState extends State<QuizScreen> {
               },
             ),
           ),
-
-     
           Positioned(
             top: screenHeight * 0.18,
             left: 20,
@@ -67,7 +66,7 @@ class _QuizScreenState extends State<QuizScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Test yourself with Mindo quizzes",
+                  S.of(context).appTagline,
                   style: Theme.of(context).textTheme.displayMedium?.copyWith(
                         color: isDark ? Colors.white : Colors.black,
                         fontSize: 28,
@@ -75,7 +74,7 @@ class _QuizScreenState extends State<QuizScreen> {
                 ),
                 const SizedBox(height: 15),
                 Text(
-                  "Hi, I'm Mindo! Choose from various categories and challenge yourself with multiple quizzes.",
+                  S.of(context).hiImMindo,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: isDark ? Colors.white70 : Colors.black87,
                         fontSize: 18,
@@ -107,7 +106,7 @@ class NextScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Next Screen")),
+      body: Center(child: Text(S.of(context).next)),
     );
   }
 }
