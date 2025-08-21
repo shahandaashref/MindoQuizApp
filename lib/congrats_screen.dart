@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mindo/generated/l10n.dart';
+import 'package:mindo/leaderboard_screen.dart';
 import '../widgets/custom_button.dart';
 // import 'leaderboard_screen.dart';
 
@@ -45,10 +46,10 @@ class CongratsScreen extends StatelessWidget {
                 CustomButton(
                   text: S.of(context).leaderboard,
                   onPressed: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => const LeaderboardScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>  Leaderboard()));
                   },
                 ),
               ],
